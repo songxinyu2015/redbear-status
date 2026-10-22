@@ -3,7 +3,7 @@
  "name": "lemon",
  "enabled": true,
  "version": "17413c9b",
- "update_available": false,
+ "update_available": true,
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
@@ -68,5 +68,5 @@
    "last": "RuntimeError: 配音兼容路径已存在且指向其他文件，未覆盖：redbear_voice_20260904_e3_s201.pth"
   }
  ],
- "reported_at": "2026-10-22 18:13:37"
+ "reported_at": "2026-10-22 18:16:47"
 }
