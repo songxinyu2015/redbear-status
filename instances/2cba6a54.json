@@ -7,7 +7,7 @@
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
- "disk_free_gb": 308.8,
+ "disk_free_gb": 308.7,
  "doing": [],
  "recent": [
   {
@@ -79,5 +79,5 @@
    ]
   }
  ],
- "reported_at": "2026-10-22 18:18:59"
+ "reported_at": "2026-10-22 18:24:17"
 }
