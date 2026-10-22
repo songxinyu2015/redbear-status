@@ -1,0 +1,53 @@
+{
+ "id": "2cba6a54",
+ "name": "",
+ "enabled": true,
+ "version": "cad58124",
+ "update_available": false,
+ "web_ok": true,
+ "lingqi_logged_in": false,
+ "selftest_ok": true,
+ "disk_free_gb": 312.9,
+ "doing": [],
+ "recent": [
+  {
+   "batch": "20261022-智能营销-3条-1510.json",
+   "status": "出错",
+   "start": "10-22 15:14:17",
+   "error": "配音进程出错：自动重跑一次配音"
+  },
+  {
+   "batch": "20261022-智能营销-3条-1502.json",
+   "status": "出错",
+   "start": "10-22 15:07:03",
+   "error": "配音进程出错：自动重跑一次配音"
+  },
+  {
+   "batch": "20261022-智能营销-3条-1459.json",
+   "status": "出错",
+   "start": "10-22 15:03:11",
+   "error": "配音进程出错：自动重跑一次配音"
+  }
+ ],
+ "problems": [
+  {
+   "file": "20261022-智能营销-3条-1510.json.问题.txt",
+   "at": "10-22 15:14",
+   "first": "配音进程出错：自动重跑一次配音",
+   "last": "RuntimeError: 配音兼容路径已存在且指向其他文件，未覆盖：redbear_voice_20260904_e3_s201.pth"
+  },
+  {
+   "file": "20261022-智能营销-3条-1502.json.问题.txt",
+   "at": "10-22 15:07",
+   "first": "配音进程出错：自动重跑一次配音",
+   "last": "RuntimeError: 配音兼容路径已存在且指向其他文件，未覆盖：redbear_voice_20260904_e3_s201.pth"
+  },
+  {
+   "file": "20261022-智能营销-3条-1459.json.问题.txt",
+   "at": "10-22 15:03",
+   "first": "配音进程出错：自动重跑一次配音",
+   "last": "RuntimeError: 配音兼容路径已存在且指向其他文件，未覆盖：redbear_voice_20260904_e3_s201.pth"
+  }
+ ],
+ "reported_at": "2026-10-22 15:38:41"
+}
