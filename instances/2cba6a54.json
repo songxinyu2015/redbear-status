@@ -8,14 +8,13 @@
  "lingqi_logged_in": true,
  "selftest_ok": true,
  "disk_free_gb": 309.6,
- "doing": [
-  "20261022-智能营销-4条-1753.json"
- ],
+ "doing": [],
  "recent": [
   {
    "batch": "20261022-智能营销-4条-1753.json",
-   "status": "运行中",
-   "start": "10-22 17:57:06"
+   "status": "出错",
+   "start": "10-22 17:57:06",
+   "error": "未知错误：点顶部「一键修复」；还不行把这一批的 问题.txt 发给 Claude"
   },
   {
    "batch": "20261022-智能营销-1条-1545.json",
@@ -44,6 +43,12 @@
  ],
  "problems": [
   {
+   "file": "20261022-智能营销-4条-1753.json.问题.txt",
+   "at": "10-22 18:00",
+   "first": "未知错误：点顶部「一键修复」；还不行把这一批的 问题.txt 发给 Claude",
+   "last": "RuntimeError: 灵启服务：Page.evaluate: Rc"
+  },
+  {
    "file": "20261022-智能营销-3条-1510.json.问题.txt",
    "at": "10-22 15:14",
    "first": "配音进程出错：自动重跑一次配音",
@@ -54,13 +59,7 @@
    "at": "10-22 15:07",
    "first": "配音进程出错：自动重跑一次配音",
    "last": "RuntimeError: 配音兼容路径已存在且指向其他文件，未覆盖：redbear_voice_20260904_e3_s201.pth"
-  },
-  {
-   "file": "20261022-智能营销-3条-1459.json.问题.txt",
-   "at": "10-22 15:03",
-   "first": "配音进程出错：自动重跑一次配音",
-   "last": "RuntimeError: 配音兼容路径已存在且指向其他文件，未覆盖：redbear_voice_20260904_e3_s201.pth"
   }
  ],
- "reported_at": "2026-10-22 17:57:58"
+ "reported_at": "2026-10-22 18:01:07"
 }
