@@ -7,7 +7,7 @@
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
- "disk_free_gb": 312.6,
+ "disk_free_gb": 312.1,
  "doing": [],
  "recent": [
   {
@@ -55,5 +55,5 @@
    "last": "RuntimeError: 配音兼容路径已存在且指向其他文件，未覆盖：redbear_voice_20260904_e3_s201.pth"
   }
  ],
- "reported_at": "2026-10-22 16:18:28"
+ "reported_at": "2026-10-22 16:30:00"
 }
