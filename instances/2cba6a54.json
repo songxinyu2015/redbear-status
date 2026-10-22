@@ -8,8 +8,15 @@
  "lingqi_logged_in": true,
  "selftest_ok": true,
  "disk_free_gb": 309.6,
- "doing": [],
+ "doing": [
+  "20261022-智能营销-3条-1803.json"
+ ],
  "recent": [
+  {
+   "batch": "20261022-智能营销-3条-1803.json",
+   "status": "运行中",
+   "start": "10-22 18:04:26"
+  },
   {
    "batch": "20261022-智能营销-4条-1753.json",
    "status": "出错",
@@ -61,5 +68,5 @@
    "last": "RuntimeError: 配音兼容路径已存在且指向其他文件，未覆盖：redbear_voice_20260904_e3_s201.pth"
   }
  ],
- "reported_at": "2026-10-22 18:01:07"
+ "reported_at": "2026-10-22 18:05:17"
 }
