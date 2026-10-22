@@ -1,6 +1,6 @@
 {
  "id": "2cba6a54",
- "name": "",
+ "name": "lemon",
  "enabled": true,
  "version": "cad58124",
  "update_available": false,
@@ -49,5 +49,5 @@
    "last": "RuntimeError: 配音兼容路径已存在且指向其他文件，未覆盖：redbear_voice_20260904_e3_s201.pth"
   }
  ],
- "reported_at": "2026-10-22 15:39:42"
+ "reported_at": "2026-10-22 15:40:46"
 }
