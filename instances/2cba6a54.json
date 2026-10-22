@@ -3,7 +3,7 @@
  "name": "lemon",
  "enabled": true,
  "version": "ba6e207a",
- "update_available": false,
+ "update_available": true,
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
@@ -79,5 +79,5 @@
    ]
   }
  ],
- "reported_at": "2026-10-22 18:25:20"
+ "reported_at": "2026-10-22 18:30:36"
 }
