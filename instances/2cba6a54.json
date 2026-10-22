@@ -2,8 +2,8 @@
  "id": "2cba6a54",
  "name": "lemon",
  "enabled": true,
- "version": "17413c9b",
- "update_available": true,
+ "version": "ba6e207a",
+ "update_available": false,
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
@@ -52,20 +52,32 @@
    "file": "20261022-智能营销-4条-1753.json.问题.txt",
    "at": "10-22 18:00",
    "first": "未知错误：点顶部「一键修复」；还不行把这一批的 问题.txt 发给 Claude",
-   "last": "RuntimeError: 灵启服务：Page.evaluate: Rc"
+   "last": "RuntimeError: 灵启服务：Page.evaluate: Rc",
+   "where": [
+    "File \"/data/app-repo/rbflow/lingqi.py\", line 220, in tasks",
+    "File \"/data/app-repo/rbflow/lingqi_service.py\", line 31, in call"
+   ]
   },
   {
    "file": "20261022-智能营销-3条-1510.json.问题.txt",
    "at": "10-22 15:14",
    "first": "配音进程出错：自动重跑一次配音",
-   "last": "RuntimeError: 配音兼容路径已存在且指向其他文件，未覆盖：redbear_voice_20260904_e3_s201.pth"
+   "last": "RuntimeError: 配音兼容路径已存在且指向其他文件，未覆盖：redbear_voice_20260904_e3_s201.pth",
+   "where": [
+    "File \"/data/app-repo/rbflow/voice_server.py\", line 55, in prepare",
+    "File \"/data/app-repo/rbflow/voice_server.py\", line 38, in ensure_assets"
+   ]
   },
   {
    "file": "20261022-智能营销-3条-1502.json.问题.txt",
    "at": "10-22 15:07",
    "first": "配音进程出错：自动重跑一次配音",
-   "last": "RuntimeError: 配音兼容路径已存在且指向其他文件，未覆盖：redbear_voice_20260904_e3_s201.pth"
+   "last": "RuntimeError: 配音兼容路径已存在且指向其他文件，未覆盖：redbear_voice_20260904_e3_s201.pth",
+   "where": [
+    "File \"/data/app-repo/rbflow/voice_server.py\", line 30, in prepare",
+    "File \"/data/app-repo/rbflow/voice_server.py\", line 22, in ensure_assets"
+   ]
   }
  ],
- "reported_at": "2026-10-22 18:18:51"
+ "reported_at": "2026-10-22 18:18:59"
 }
