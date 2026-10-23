@@ -2,8 +2,8 @@
  "id": "629022aa",
  "name": "",
  "enabled": true,
- "version": "17413c9b",
- "update_available": true,
+ "version": "07f56e98",
+ "update_available": false,
  "web_ok": true,
  "lingqi_logged_in": false,
  "selftest_ok": true,
@@ -11,5 +11,5 @@
  "doing": [],
  "recent": [],
  "problems": [],
- "reported_at": "2026-10-23 18:21:07"
+ "reported_at": "2026-10-23 18:24:24"
 }
