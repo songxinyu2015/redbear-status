@@ -30,5 +30,5 @@
    "detail": "未知错误：点顶部「一键修复」；还不行把这一批的 问题.txt 发给 Claude\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 193, in run\nself.lq.check_login()\nFile \"/data/app-repo/rbflow/lingqi.py\", line 244, in check_login\nreturn self._raw_check()  # 云端没有 Safari，登录过期由管理员在 /lingqi-login 处理\n^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi.py\", line 174, in _raw_check\nresp = self._svc.call(\"/check_login\", {}, timeout=30)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 27, in call\nreturn self._call_once(path, data, timeout, binary)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 48, in _call_once\nraise RuntimeError(\"灵启服务：\" + redact(reason)) from None\nRuntimeError: 灵启服务：Page.evaluate: 401"
   }
  ],
- "reported_at": "2026-10-24 09:15:17"
+ "reported_at": "2026-10-24 09:31:03"
 }
