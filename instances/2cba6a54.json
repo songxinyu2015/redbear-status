@@ -2,21 +2,28 @@
  "id": "2cba6a54",
  "name": "lemon",
  "enabled": true,
- "version": "89a3f13c",
- "update_available": true,
+ "version": "724267f2",
+ "update_available": false,
  "update_error": "",
- "update_checked_at": 1793008938.7989953,
+ "update_checked_at": 1793009025.9900787,
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
  "disk_free_gb": 309.5,
- "doing": [],
+ "doing": [
+  "20261026-智能营销-3条-1802.json"
+ ],
  "recent": [
   {
+   "batch": "20261026-智能营销-3条-1802.json",
+   "status": "运行中",
+   "start": "10-26 18:03:51"
+  },
+  {
    "batch": "20261026-智能营销-3条-1752.json",
-   "status": "自动重试中",
-   "start": "10-26 18:01:03",
-   "error": "配音进程出错：自动重跑一次配音（第 2/2 次自动修复）"
+   "status": "出错",
+   "start": "10-26 18:03:28",
+   "error": "配音进程出错：自动重跑一次配音"
   },
   {
    "batch": "20261023-智能营销-3条-1430.json",
@@ -53,15 +60,20 @@
    "status": "完成",
    "start": "10-22 15:46:09",
    "end": "15:56:43"
-  },
-  {
-   "batch": "20261022-智能营销-3条-1510.json",
-   "status": "出错",
-   "start": "10-22 15:14:17",
-   "error": "配音进程出错：自动重跑一次配音"
   }
  ],
  "problems": [
+  {
+   "file": "20261026-智能营销-3条-1752.json.问题.txt",
+   "at": "10-26 18:03",
+   "first": "配音进程出错：自动重跑一次配音",
+   "last": "NameError: name 'hps' is not defined",
+   "where": [
+    "File \"/data/assets/voice/GPT-SoVITS/生成短视频风格三段配音.py\", line 172, in synthesize",
+    "File \"/data/assets/voice/GPT-SoVITS/GPT_SoVITS/inference_webui.py\", line 842, in get_tts_wav"
+   ],
+   "detail": "配音进程出错：自动重跑一次配音\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\nr, audio = synth_safe(frag[\"spoken\"])\n^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 80, in synth_safe\nr, audio = ns[\"synthesize\"](text)\n^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/assets/voice/GPT-SoVITS/生成短视频风格三段配音.py\", line 172, in synthesize\nrate, audio = next(\n^^^^^\nFile \"/data/assets/voice/GPT-SoVITS/GPT_SoVITS/inference_webui.py\", line 842, in get_tts_wav\nint(hps.data.sampling_rate * pause_second),\n^^^\nNameError: name 'hps' is not defined"
+  },
   {
    "file": "20261023-智能营销-3条-1353.json.问题.txt",
    "at": "10-23 14:00",
@@ -83,18 +95,7 @@
     "File \"/data/app-repo/rbflow/lingqi_service.py\", line 31, in call"
    ],
    "detail": "未知错误：点顶部「一键修复」；还不行把这一批的 问题.txt 发给 Claude\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 210, in run\nself.poll_all()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 399, in poll_all\ntasks = self.lq.tasks(50)\n^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi.py\", line 220, in tasks\nresp = (self._svc.call(\"/tasks\", {\"page_size\": page_size}, timeout=30) if self._svc else\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 31, in call\nraise RuntimeError(\"灵启服务：\" + redact(reason)) from None\nRuntimeError: 灵启服务：Page.evaluate: Rc"
-  },
-  {
-   "file": "20261022-智能营销-3条-1510.json.问题.txt",
-   "at": "10-22 15:14",
-   "first": "配音进程出错：自动重跑一次配音",
-   "last": "RuntimeError: 配音兼容路径已存在且指向其他文件，未覆盖：redbear_voice_20260904_e3_s201.pth",
-   "where": [
-    "File \"/data/app-repo/rbflow/voice_server.py\", line 55, in prepare",
-    "File \"/data/app-repo/rbflow/voice_server.py\", line 38, in ensure_assets"
-   ],
-   "detail": "配音进程出错：自动重跑一次配音\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 26, in <module>\nvoice_threads = prepare(cfg)\n^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_server.py\", line 55, in prepare\nrepo = ensure_assets(cfg)\n^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_server.py\", line 38, in ensure_assets\nraise RuntimeError(f\"配音兼容路径已存在且指向其他文件，未覆盖：{alias.name}\")\nRuntimeError: 配音兼容路径已存在且指向其他文件，未覆盖：redbear_voice_20260904_e3_s201.pth"
   }
  ],
- "reported_at": "2026-10-26 18:03:22"
+ "reported_at": "2026-10-26 18:03:52"
 }
