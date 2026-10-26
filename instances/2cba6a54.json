@@ -5,9 +5,9 @@
  "version": "07f56e98",
  "update_available": false,
  "web_ok": true,
- "lingqi_logged_in": true,
+ "lingqi_logged_in": false,
  "selftest_ok": true,
- "disk_free_gb": 302.6,
+ "disk_free_gb": 305.7,
  "doing": [],
  "recent": [
   {
@@ -94,5 +94,5 @@
    "detail": "配音进程出错：自动重跑一次配音\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 26, in <module>\nvoice_threads = prepare(cfg)\n^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_server.py\", line 55, in prepare\nrepo = ensure_assets(cfg)\n^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_server.py\", line 38, in ensure_assets\nraise RuntimeError(f\"配音兼容路径已存在且指向其他文件，未覆盖：{alias.name}\")\nRuntimeError: 配音兼容路径已存在且指向其他文件，未覆盖：redbear_voice_20260904_e3_s201.pth"
   }
  ],
- "reported_at": "2026-10-23 18:56:14"
+ "reported_at": "2026-10-26 10:00:40"
 }
