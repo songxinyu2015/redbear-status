@@ -5,7 +5,7 @@
  "version": "724267f2",
  "update_available": false,
  "update_error": "",
- "update_checked_at": 1793009037.994773,
+ "update_checked_at": 1793009168.4012606,
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
@@ -13,16 +13,16 @@
  "doing": [],
  "recent": [
   {
+   "batch": "20261026-智能营销-3条-1804.json",
+   "status": "自动重试中",
+   "start": "10-26 18:06:16",
+   "error": "配音进程出错：自动重跑一次配音（第 2/2 次自动修复）"
+  },
+  {
    "batch": "20261026-智能营销-3条-1802.json",
    "status": "自动重试中",
    "start": "10-26 18:05:16",
    "error": "配音进程出错：自动重跑一次配音（第 2/2 次自动修复）"
-  },
-  {
-   "batch": "20261026-智能营销-3条-1804.json",
-   "status": "自动重试中",
-   "start": "10-26 18:04:52",
-   "error": "配音进程出错：自动重跑一次配音（第 1/2 次自动修复）"
   },
   {
    "batch": "20261026-智能营销-3条-1752.json",
@@ -96,5 +96,5 @@
    "detail": "未知错误：点顶部「一键修复」；还不行把这一批的 问题.txt 发给 Claude\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 210, in run\nself.poll_all()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 399, in poll_all\ntasks = self.lq.tasks(50)\n^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi.py\", line 220, in tasks\nresp = (self._svc.call(\"/tasks\", {\"page_size\": page_size}, timeout=30) if self._svc else\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 31, in call\nraise RuntimeError(\"灵启服务：\" + redact(reason)) from None\nRuntimeError: 灵启服务：Page.evaluate: Rc"
   }
  ],
- "reported_at": "2026-10-26 18:06:06"
+ "reported_at": "2026-10-26 18:07:11"
 }
