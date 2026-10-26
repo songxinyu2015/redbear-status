@@ -5,7 +5,7 @@
  "version": "8eaa4b28",
  "update_available": false,
  "update_error": "",
- "update_checked_at": 1793010202.4355328,
+ "update_checked_at": 1793010330.1194587,
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
@@ -96,5 +96,5 @@
    "detail": "配音进程出错：自动重跑一次配音\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\nr, audio = synth_safe(frag[\"spoken\"])\n^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 80, in synth_safe\nr, audio = ns[\"synthesize\"](text)\n^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/assets/voice/GPT-SoVITS/生成短视频风格三段配音.py\", line 172, in synthesize\nrate, audio = next(\n^^^^^\nFile \"/data/assets/voice/GPT-SoVITS/GPT_SoVITS/inference_webui.py\", line 842, in get_tts_wav\nint(hps.data.sampling_rate * pause_second),\n^^^\nNameError: name 'hps' is not defined"
   }
  ],
- "reported_at": "2026-10-26 18:24:25"
+ "reported_at": "2026-10-26 18:26:33"
 }
