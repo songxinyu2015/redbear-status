@@ -2,14 +2,22 @@
  "id": "2cba6a54",
  "name": "lemon",
  "enabled": true,
- "version": "07f56e98",
+ "version": "89a3f13c",
  "update_available": false,
+ "update_error": "",
+ "update_checked_at": 1793008920.7686515,
  "web_ok": true,
  "lingqi_logged_in": false,
  "selftest_ok": true,
- "disk_free_gb": 307.4,
+ "disk_free_gb": 309.5,
  "doing": [],
  "recent": [
+  {
+   "batch": "20261026-智能营销-3条-1752.json",
+   "status": "自动重试中",
+   "start": "10-26 18:01:03",
+   "error": "配音进程出错：自动重跑一次配音（第 2/2 次自动修复）"
+  },
   {
    "batch": "20261023-智能营销-3条-1430.json",
    "status": "完成",
@@ -51,12 +59,6 @@
    "status": "出错",
    "start": "10-22 15:14:17",
    "error": "配音进程出错：自动重跑一次配音"
-  },
-  {
-   "batch": "20261022-智能营销-3条-1502.json",
-   "status": "出错",
-   "start": "10-22 15:07:03",
-   "error": "配音进程出错：自动重跑一次配音"
   }
  ],
  "problems": [
@@ -64,12 +66,12 @@
    "file": "20261023-智能营销-3条-1353.json.问题.txt",
    "at": "10-23 14:00",
    "first": "未知错误：点顶部「一键修复」；还不行把这一批的 问题.txt 发给 Claude",
-   "last": "- referer: https://lingqi.redbearai.com/app/AIGC/AigcMater",
+   "last": "RuntimeError: 灵启服务：APIRequestContext.get: Client network socket disconnected before secure TLS connection was established (ECONNRESET)",
    "where": [
     "File \"/data/app-repo/rbflow/lingqi.py\", line 342, in tasks",
     "File \"/data/app-repo/rbflow/lingqi_service.py\", line 31, in call"
    ],
-   "detail": "File \"/data/app-repo/rbflow/lingqi.py\", line 342, in tasks\nresp = (self._svc.call(\"/tasks\", {\"page_size\": page_size}, timeout=30) if self._svc else\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 31, in call\nraise RuntimeError(\"灵启服务：\" + redact(reason)) from None\nRuntimeError: 灵启服务：APIRequestContext.get: Client network socket disconnected before secure TLS connection was established (ECONNRESET)\nCall log:\n- → GET https://lingqi.redbearai.com/api/aigc/video/task?[已隐藏]\n- user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36\n- accept: */*\n- accept-encoding: gzip,deflate,br\n- x-app-code: AIGC\n- appid: LINGQI\n- x-org-id: 2608656287\n- authorization: 79408aba18aac242839ae91683ee3115f66f\n- sec-ch-ua-platform: \"Linux\"\n- sec-ch-ua: \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\", \"HeadlessChrome\";v=\"156\"\n- x-busitype: LINGQI\n- sec-ch-ua-mobile: ?0\n- access-control-allow-methods: PUT,POST,GET,OPTIONS\n- x-aigc-teamid: 1\n- x-auth-version: 2.0\n- x-app-id: 2619771064\n- traceparent: 00-66c9c9bae0bd460a95f470ff5f066b98-23cf8fbf35280c33-01\n- x-viewtype: WEB\n- tracestate: rum=v2&browser&j0josuwkqg@c9161cc725c712df265f1&cdc814c070614053b4bf5917e293a3d6&uid_p13vd70t27nmvw8n\n- platform: POP\n- access-control-allow-headers: X-Requested-With,Content-Type\n- x-orgid: 2608656287\n- referer: https://lingqi.redbearai.com/app/AIGC/AigcMater"
+   "detail": "未知错误：点顶部「一键修复」；还不行把这一批的 问题.txt 发给 Claude\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 210, in run\nself.poll_all()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 399, in poll_all\ntasks = self.lq.tasks(50)\n^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi.py\", line 342, in tasks\nresp = (self._svc.call(\"/tasks\", {\"page_size\": page_size}, timeout=30) if self._svc else\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 31, in call\nraise RuntimeError(\"灵启服务：\" + redact(reason)) from None\nRuntimeError: 灵启服务：APIRequestContext.get: Client network socket disconnected before secure TLS connection was established (ECONNRESET)"
   },
   {
    "file": "20261022-智能营销-4条-1753.json.问题.txt",
@@ -94,5 +96,5 @@
    "detail": "配音进程出错：自动重跑一次配音\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 26, in <module>\nvoice_threads = prepare(cfg)\n^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_server.py\", line 55, in prepare\nrepo = ensure_assets(cfg)\n^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_server.py\", line 38, in ensure_assets\nraise RuntimeError(f\"配音兼容路径已存在且指向其他文件，未覆盖：{alias.name}\")\nRuntimeError: 配音兼容路径已存在且指向其他文件，未覆盖：redbear_voice_20260904_e3_s201.pth"
   }
  ],
- "reported_at": "2026-10-26 17:01:24"
+ "reported_at": "2026-10-26 18:02:14"
 }
