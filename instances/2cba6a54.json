@@ -5,13 +5,20 @@
  "version": "724267f2",
  "update_available": false,
  "update_error": "",
- "update_checked_at": 1793009778.3107855,
+ "update_checked_at": 1793009904.4956143,
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
  "disk_free_gb": 309.5,
- "doing": [],
+ "doing": [
+  "20261026-智能营销-3条-1817.json"
+ ],
  "recent": [
+  {
+   "batch": "20261026-智能营销-3条-1817.json",
+   "status": "运行中",
+   "start": "10-26 18:18:24"
+  },
   {
    "batch": "20261026-智能营销-3条-1804.json",
    "status": "出错",
@@ -53,12 +60,6 @@
    "status": "完成",
    "start": "10-22 18:04:26",
    "end": "18:18:41"
-  },
-  {
-   "batch": "20261022-智能营销-4条-1753.json",
-   "status": "出错",
-   "start": "10-22 17:57:06",
-   "error": "未知错误：点顶部「一键修复」；还不行把这一批的 问题.txt 发给 Claude"
   }
  ],
  "problems": [
@@ -96,5 +97,5 @@
    "detail": "配音进程出错：自动重跑一次配音\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\nr, audio = synth_safe(frag[\"spoken\"])\n^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 80, in synth_safe\nr, audio = ns[\"synthesize\"](text)\n^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/assets/voice/GPT-SoVITS/生成短视频风格三段配音.py\", line 172, in synthesize\nrate, audio = next(\n^^^^^\nFile \"/data/assets/voice/GPT-SoVITS/GPT_SoVITS/inference_webui.py\", line 842, in get_tts_wav\nint(hps.data.sampling_rate * pause_second),\n^^^\nNameError: name 'hps' is not defined"
   }
  ],
- "reported_at": "2026-10-26 18:16:31"
+ "reported_at": "2026-10-26 18:18:37"
 }
