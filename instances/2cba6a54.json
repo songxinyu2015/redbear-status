@@ -10,20 +10,19 @@
  "lingqi_logged_in": true,
  "selftest_ok": true,
  "disk_free_gb": 309.5,
- "doing": [
-  "20261026-智能营销-3条-1821.json"
- ],
+ "doing": [],
  "recent": [
   {
-   "batch": "20261026-智能营销-3条-1821.json",
-   "status": "运行中",
-   "start": "10-26 18:22:04"
+   "batch": "20261026-智能营销-3条-1817.json",
+   "status": "出错",
+   "start": "10-26 18:22:30",
+   "error": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因"
   },
   {
-   "batch": "20261026-智能营销-3条-1817.json",
-   "status": "自动重试中",
-   "start": "10-26 18:19:49",
-   "error": "配音进程出错：自动重跑一次配音（第 2/2 次自动修复）"
+   "batch": "20261026-智能营销-3条-1821.json",
+   "status": "出错",
+   "start": "10-26 18:22:04",
+   "error": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因"
   },
   {
    "batch": "20261026-智能营销-3条-1804.json",
@@ -64,6 +63,28 @@
  ],
  "problems": [
   {
+   "file": "20261026-智能营销-3条-1817.json.问题.txt",
+   "at": "10-26 18:22",
+   "first": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因",
+   "last": "RuntimeError: 配音模型初始化失败：KeyError：b'XS'",
+   "where": [
+    "File \"/data/app-repo/rbflow/voice_worker.py\", line 31, in <module>",
+    "File \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded"
+   ],
+   "detail": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\n~~~~~~~~~~~~^^^^^^^^^\nKeyError: b'XS'\nThe above exception was the direct cause of the following exception:\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 31, in <module>\nif ensure_sovits_loaded(engine, cfg, ns.get(\"CHINESE\", \"中文\")):\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded\nraise RuntimeError(\"配音模型初始化失败：\" + type(exc).__name__ + \"：\" + redact(exc)) from exc\nRuntimeError: 配音模型初始化失败：KeyError：b'XS'"
+  },
+  {
+   "file": "20261026-智能营销-3条-1821.json.问题.txt",
+   "at": "10-26 18:22",
+   "first": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因",
+   "last": "RuntimeError: 配音模型初始化失败：KeyError：b'XS'",
+   "where": [
+    "File \"/data/app-repo/rbflow/voice_worker.py\", line 31, in <module>",
+    "File \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded"
+   ],
+   "detail": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\n~~~~~~~~~~~~^^^^^^^^^\nKeyError: b'XS'\nThe above exception was the direct cause of the following exception:\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 31, in <module>\nif ensure_sovits_loaded(engine, cfg, ns.get(\"CHINESE\", \"中文\")):\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded\nraise RuntimeError(\"配音模型初始化失败：\" + type(exc).__name__ + \"：\" + redact(exc)) from exc\nRuntimeError: 配音模型初始化失败：KeyError：b'XS'"
+  },
+  {
    "file": "20261026-智能营销-3条-1804.json.问题.txt",
    "at": "10-26 18:08",
    "first": "配音进程出错：自动重跑一次配音",
@@ -73,29 +94,7 @@
     "File \"/data/assets/voice/GPT-SoVITS/GPT_SoVITS/inference_webui.py\", line 842, in get_tts_wav"
    ],
    "detail": "配音进程出错：自动重跑一次配音\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\nr, audio = synth_safe(frag[\"spoken\"])\n^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 80, in synth_safe\nr, audio = ns[\"synthesize\"](text)\n^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/assets/voice/GPT-SoVITS/生成短视频风格三段配音.py\", line 172, in synthesize\nrate, audio = next(\n^^^^^\nFile \"/data/assets/voice/GPT-SoVITS/GPT_SoVITS/inference_webui.py\", line 842, in get_tts_wav\nint(hps.data.sampling_rate * pause_second),\n^^^\nNameError: name 'hps' is not defined"
-  },
-  {
-   "file": "20261026-智能营销-3条-1802.json.问题.txt",
-   "at": "10-26 18:07",
-   "first": "配音进程出错：自动重跑一次配音",
-   "last": "NameError: name 'hps' is not defined",
-   "where": [
-    "File \"/data/assets/voice/GPT-SoVITS/生成短视频风格三段配音.py\", line 172, in synthesize",
-    "File \"/data/assets/voice/GPT-SoVITS/GPT_SoVITS/inference_webui.py\", line 842, in get_tts_wav"
-   ],
-   "detail": "配音进程出错：自动重跑一次配音\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\nr, audio = synth_safe(frag[\"spoken\"])\n^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 80, in synth_safe\nr, audio = ns[\"synthesize\"](text)\n^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/assets/voice/GPT-SoVITS/生成短视频风格三段配音.py\", line 172, in synthesize\nrate, audio = next(\n^^^^^\nFile \"/data/assets/voice/GPT-SoVITS/GPT_SoVITS/inference_webui.py\", line 842, in get_tts_wav\nint(hps.data.sampling_rate * pause_second),\n^^^\nNameError: name 'hps' is not defined"
-  },
-  {
-   "file": "20261026-智能营销-3条-1752.json.问题.txt",
-   "at": "10-26 18:03",
-   "first": "配音进程出错：自动重跑一次配音",
-   "last": "NameError: name 'hps' is not defined",
-   "where": [
-    "File \"/data/assets/voice/GPT-SoVITS/生成短视频风格三段配音.py\", line 172, in synthesize",
-    "File \"/data/assets/voice/GPT-SoVITS/GPT_SoVITS/inference_webui.py\", line 842, in get_tts_wav"
-   ],
-   "detail": "配音进程出错：自动重跑一次配音\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\nr, audio = synth_safe(frag[\"spoken\"])\n^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 80, in synth_safe\nr, audio = ns[\"synthesize\"](text)\n^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/assets/voice/GPT-SoVITS/生成短视频风格三段配音.py\", line 172, in synthesize\nrate, audio = next(\n^^^^^\nFile \"/data/assets/voice/GPT-SoVITS/GPT_SoVITS/inference_webui.py\", line 842, in get_tts_wav\nint(hps.data.sampling_rate * pause_second),\n^^^\nNameError: name 'hps' is not defined"
   }
  ],
- "reported_at": "2026-10-26 18:22:16"
+ "reported_at": "2026-10-26 18:23:20"
 }
