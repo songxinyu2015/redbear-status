@@ -3,15 +3,21 @@
  "name": "lemon",
  "enabled": true,
  "version": "8eaa4b28",
- "update_available": false,
- "update_error": "GitHub 连接超时，稍后会自动再试",
- "update_checked_at": 1793062901.5812852,
+ "update_available": true,
+ "update_error": "",
+ "update_checked_at": 1793063325.0381436,
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
- "disk_free_gb": 309.4,
+ "disk_free_gb": 309.3,
  "doing": [],
  "recent": [
+  {
+   "batch": "20261027-智能营销-3条-0907.json",
+   "status": "出错",
+   "start": "10-27 09:08:20",
+   "error": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因"
+  },
   {
    "batch": "20261026-智能营销-3条-1841.json",
    "status": "出错",
@@ -53,15 +59,20 @@
    "status": "出错",
    "start": "10-26 18:03:28",
    "error": "配音进程出错：自动重跑一次配音"
-  },
-  {
-   "batch": "20261023-智能营销-3条-1430.json",
-   "status": "完成",
-   "start": "10-23 14:39:18",
-   "end": "14:52:36"
   }
  ],
  "problems": [
+  {
+   "file": "20261027-智能营销-3条-0907.json.问题.txt",
+   "at": "10-27 09:08",
+   "first": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因",
+   "last": "RuntimeError: 配音模型初始化失败：KeyError：b'XS'",
+   "where": [
+    "File \"/data/app-repo/rbflow/voice_worker.py\", line 31, in <module>",
+    "File \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded"
+   ],
+   "detail": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\n~~~~~~~~~~~~^^^^^^^^^\nKeyError: b'XS'\nThe above exception was the direct cause of the following exception:\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 31, in <module>\nif ensure_sovits_loaded(engine, cfg, ns.get(\"CHINESE\", \"中文\")):\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded\nraise RuntimeError(\"配音模型初始化失败：\" + type(exc).__name__ + \"：\" + redact(exc)) from exc\nRuntimeError: 配音模型初始化失败：KeyError：b'XS'"
+  },
   {
    "file": "20261026-智能营销-3条-1841.json.问题.txt",
    "at": "10-26 18:44",
@@ -83,18 +94,7 @@
     "File \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded"
    ],
    "detail": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\n~~~~~~~~~~~~^^^^^^^^^\nKeyError: b'XS'\nThe above exception was the direct cause of the following exception:\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 31, in <module>\nif ensure_sovits_loaded(engine, cfg, ns.get(\"CHINESE\", \"中文\")):\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded\nraise RuntimeError(\"配音模型初始化失败：\" + type(exc).__name__ + \"：\" + redact(exc)) from exc\nRuntimeError: 配音模型初始化失败：KeyError：b'XS'"
-  },
-  {
-   "file": "20261026-智能营销-3条-1817.json.问题.txt",
-   "at": "10-26 18:22",
-   "first": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因",
-   "last": "RuntimeError: 配音模型初始化失败：KeyError：b'XS'",
-   "where": [
-    "File \"/data/app-repo/rbflow/voice_worker.py\", line 31, in <module>",
-    "File \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded"
-   ],
-   "detail": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\n~~~~~~~~~~~~^^^^^^^^^\nKeyError: b'XS'\nThe above exception was the direct cause of the following exception:\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 31, in <module>\nif ensure_sovits_loaded(engine, cfg, ns.get(\"CHINESE\", \"中文\")):\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded\nraise RuntimeError(\"配音模型初始化失败：\" + type(exc).__name__ + \"：\" + redact(exc)) from exc\nRuntimeError: 配音模型初始化失败：KeyError：b'XS'"
   }
  ],
- "reported_at": "2026-10-27 09:08:03"
+ "reported_at": "2026-10-27 09:09:49"
 }
