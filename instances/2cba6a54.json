@@ -9,9 +9,16 @@
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
- "disk_free_gb": 309.3,
- "doing": [],
+ "disk_free_gb": 309.2,
+ "doing": [
+  "20261027-智能营销-3条-0934.json"
+ ],
  "recent": [
+  {
+   "batch": "20261027-智能营销-3条-0934.json",
+   "status": "运行中",
+   "start": "10-27 09:35:07"
+  },
   {
    "batch": "20261027-智能营销-3条-0907.json",
    "status": "出错",
@@ -53,12 +60,6 @@
    "status": "出错",
    "start": "10-26 18:07:33",
    "error": "配音进程出错：自动重跑一次配音"
-  },
-  {
-   "batch": "20261026-智能营销-3条-1752.json",
-   "status": "出错",
-   "start": "10-26 18:03:28",
-   "error": "配音进程出错：自动重跑一次配音"
   }
  ],
  "problems": [
@@ -96,5 +97,5 @@
    "detail": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\n~~~~~~~~~~~~^^^^^^^^^\nKeyError: b'XS'\nThe above exception was the direct cause of the following exception:\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 31, in <module>\nif ensure_sovits_loaded(engine, cfg, ns.get(\"CHINESE\", \"中文\")):\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded\nraise RuntimeError(\"配音模型初始化失败：\" + type(exc).__name__ + \"：\" + redact(exc)) from exc\nRuntimeError: 配音模型初始化失败：KeyError：b'XS'"
   }
  ],
- "reported_at": "2026-10-27 09:34:34"
+ "reported_at": "2026-10-27 09:35:37"
 }
