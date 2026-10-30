@@ -11,13 +11,19 @@
  "selftest_ok": true,
  "disk_free_gb": 300.5,
  "doing": [
-  "20261028-智能营销-3条-1537.json"
+  "20261028-智能营销-3条-1540.json"
  ],
  "recent": [
   {
-   "batch": "20261028-智能营销-3条-1537.json",
+   "batch": "20261028-智能营销-3条-1540.json",
    "status": "运行中",
-   "start": "10-30 14:03:32"
+   "start": "10-30 14:05:59"
+  },
+  {
+   "batch": "20261028-智能营销-3条-1537.json",
+   "status": "出错",
+   "start": "10-30 14:03:32",
+   "error": "等待超时：等一会儿自动重试"
   },
   {
    "batch": "20261029-智能营销-6条-1613.json",
@@ -44,12 +50,6 @@
    "error": "等待超时：等一会儿自动重试（第 2/2 次自动修复）"
   },
   {
-   "batch": "20261028-智能营销-3条-1540.json",
-   "status": "自动重试中",
-   "start": "10-30 13:50:28",
-   "error": "等待超时：等一会儿自动重试（第 2/2 次自动修复）"
-  },
-  {
    "batch": "20261028-智能营销-3条-1529.json",
    "status": "完成",
    "start": "10-28 15:36:56",
@@ -63,6 +63,17 @@
   }
  ],
  "problems": [
+  {
+   "file": "20261028-智能营销-3条-1537.json.问题.txt",
+   "at": "10-30 14:05",
+   "first": "等待超时：等一会儿自动重试",
+   "last": "RuntimeError: 灵启服务连接失败：TimeoutError",
+   "where": [
+    "File \"/data/app-repo/rbflow/lingqi_service.py\", line 32, in call",
+    "File \"/data/app-repo/rbflow/lingqi_service.py\", line 53, in _call_once"
+   ],
+   "detail": "等待超时：等一会儿自动重试\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 193, in run\nself.lq.check_login()\nFile \"/data/app-repo/rbflow/lingqi.py\", line 248, in check_login\nreturn self._raw_check()  # 云端没有 Safari，登录过期由管理员在 /lingqi-login 处理\n^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi.py\", line 178, in _raw_check\nresp = self._svc.call(\"/check_login\", {}, timeout=30)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 32, in call\nreturn self._call_once(path, data, timeout, binary)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 53, in _call_once\nraise RuntimeError(message) from None\nRuntimeError: 灵启服务连接失败：TimeoutError"
+  },
   {
    "file": "20261027-智能营销-3条-0907.json.问题.txt",
    "at": "10-27 09:08",
@@ -84,18 +95,7 @@
     "File \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded"
    ],
    "detail": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\n~~~~~~~~~~~~^^^^^^^^^\nKeyError: b'XS'\nThe above exception was the direct cause of the following exception:\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 31, in <module>\nif ensure_sovits_loaded(engine, cfg, ns.get(\"CHINESE\", \"中文\")):\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded\nraise RuntimeError(\"配音模型初始化失败：\" + type(exc).__name__ + \"：\" + redact(exc)) from exc\nRuntimeError: 配音模型初始化失败：KeyError：b'XS'"
-  },
-  {
-   "file": "20261026-智能营销-3条-1830.json.问题.txt",
-   "at": "10-26 18:36",
-   "first": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因",
-   "last": "RuntimeError: 配音模型初始化失败：KeyError：b'XS'",
-   "where": [
-    "File \"/data/app-repo/rbflow/voice_worker.py\", line 31, in <module>",
-    "File \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded"
-   ],
-   "detail": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\n~~~~~~~~~~~~^^^^^^^^^\nKeyError: b'XS'\nThe above exception was the direct cause of the following exception:\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 31, in <module>\nif ensure_sovits_loaded(engine, cfg, ns.get(\"CHINESE\", \"中文\")):\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded\nraise RuntimeError(\"配音模型初始化失败：\" + type(exc).__name__ + \"：\" + redact(exc)) from exc\nRuntimeError: 配音模型初始化失败：KeyError：b'XS'"
   }
  ],
- "reported_at": "2026-10-30 14:05:06"
+ "reported_at": "2026-10-30 14:06:17"
 }
