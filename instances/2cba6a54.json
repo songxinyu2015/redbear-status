@@ -7,17 +7,47 @@
  "update_error": "",
  "update_checked_at": 1793262891.4602559,
  "web_ok": true,
- "lingqi_logged_in": false,
+ "lingqi_logged_in": true,
  "selftest_ok": true,
  "disk_free_gb": 300.5,
  "doing": [
-  "20261028-智能营销-3条-1540.json"
+  "20261030-智能营销-3条-1412.json"
  ],
  "recent": [
   {
-   "batch": "20261028-智能营销-3条-1540.json",
+   "batch": "20261030-智能营销-3条-1412.json",
    "status": "运行中",
-   "start": "10-30 14:05:59"
+   "start": "10-30 14:22:34"
+  },
+  {
+   "batch": "20261029-智能营销-6条-1613.json",
+   "status": "完成",
+   "start": "10-30 14:18:27",
+   "end": "14:22:32"
+  },
+  {
+   "batch": "20261029-智能营销-3条-1651.json",
+   "status": "完成",
+   "start": "10-30 14:15:14",
+   "end": "14:18:27"
+  },
+  {
+   "batch": "20261029-智能营销-3条-1616.json",
+   "status": "完成",
+   "start": "10-30 14:13:14",
+   "end": "14:15:14"
+  },
+  {
+   "batch": "20261028-智能营销-3条-1632.json",
+   "status": "完成",
+   "start": "10-30 14:10:48",
+   "end": "14:13:14"
+  },
+  {
+   "batch": "20261028-智能营销-3条-1540.json",
+   "status": "完成",
+   "start": "10-30 14:05:59",
+   "end": "14:10:48"
   },
   {
    "batch": "20261028-智能营销-3条-1537.json",
@@ -26,40 +56,10 @@
    "error": "等待超时：等一会儿自动重试"
   },
   {
-   "batch": "20261029-智能营销-6条-1613.json",
-   "status": "自动重试中",
-   "start": "10-30 14:00:54",
-   "error": "等待超时：等一会儿自动重试（第 2/2 次自动修复）"
-  },
-  {
-   "batch": "20261029-智能营销-3条-1651.json",
-   "status": "自动重试中",
-   "start": "10-30 13:58:17",
-   "error": "等待超时：等一会儿自动重试（第 2/2 次自动修复）"
-  },
-  {
-   "batch": "20261029-智能营销-3条-1616.json",
-   "status": "自动重试中",
-   "start": "10-30 13:55:41",
-   "error": "等待超时：等一会儿自动重试（第 2/2 次自动修复）"
-  },
-  {
-   "batch": "20261028-智能营销-3条-1632.json",
-   "status": "自动重试中",
-   "start": "10-30 13:53:05",
-   "error": "等待超时：等一会儿自动重试（第 2/2 次自动修复）"
-  },
-  {
    "batch": "20261028-智能营销-3条-1529.json",
    "status": "完成",
    "start": "10-28 15:36:56",
    "end": "15:47:15"
-  },
-  {
-   "batch": "20261027-智能营销-3条-1224.json",
-   "status": "完成",
-   "start": "10-27 12:25:21",
-   "end": "12:34:37"
   }
  ],
  "problems": [
@@ -97,5 +97,5 @@
    "detail": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\n~~~~~~~~~~~~^^^^^^^^^\nKeyError: b'XS'\nThe above exception was the direct cause of the following exception:\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 31, in <module>\nif ensure_sovits_loaded(engine, cfg, ns.get(\"CHINESE\", \"中文\")):\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded\nraise RuntimeError(\"配音模型初始化失败：\" + type(exc).__name__ + \"：\" + redact(exc)) from exc\nRuntimeError: 配音模型初始化失败：KeyError：b'XS'"
   }
  ],
- "reported_at": "2026-10-30 14:06:17"
+ "reported_at": "2026-10-30 14:23:18"
 }
