@@ -5,19 +5,25 @@
  "version": "ea278a9d",
  "update_available": false,
  "update_error": "",
- "update_checked_at": 1793759056.773581,
+ "update_checked_at": 1793759190.3344326,
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
- "disk_free_gb": 243.6,
+ "disk_free_gb": 243.0,
  "doing": [
-  "20261104-智能营销-3条-1009.json（脚本1 视频已下载 5分钟，脚本2 视频已下载 6分钟，脚本3 生成中 11分钟[灵启生成中]）"
+  "20261104-智能客服-6条-1012.json（脚本1 待开始，脚本2 待开始，脚本3 待开始，脚本4 待开始，脚本5 待开始，脚本6 待开始）"
  ],
  "recent": [
   {
-   "batch": "20261104-智能营销-3条-1009.json",
+   "batch": "20261104-智能客服-6条-1012.json",
    "status": "运行中",
-   "start": "11-04 10:12:47"
+   "start": "11-04 10:27:13"
+  },
+  {
+   "batch": "20261104-智能营销-3条-1009.json",
+   "status": "完成",
+   "start": "11-04 10:12:47",
+   "end": "10:27:11"
   },
   {
    "batch": "20261103-智能营销-3条-1500.json",
@@ -54,12 +60,6 @@
    "status": "完成",
    "start": "10-30 14:22:34",
    "end": "14:25:13"
-  },
-  {
-   "batch": "20261029-智能营销-6条-1613.json",
-   "status": "完成",
-   "start": "10-30 14:18:27",
-   "end": "14:22:32"
   }
  ],
  "problems": [
@@ -97,5 +97,5 @@
    "detail": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\n~~~~~~~~~~~~^^^^^^^^^\nKeyError: b'XS'\nThe above exception was the direct cause of the following exception:\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 31, in <module>\nif ensure_sovits_loaded(engine, cfg, ns.get(\"CHINESE\", \"中文\")):\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded\nraise RuntimeError(\"配音模型初始化失败：\" + type(exc).__name__ + \"：\" + redact(exc)) from exc\nRuntimeError: 配音模型初始化失败：KeyError：b'XS'"
   }
  ],
- "reported_at": "2026-11-04 10:26:27"
+ "reported_at": "2026-11-04 10:27:34"
 }
