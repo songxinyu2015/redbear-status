@@ -5,19 +5,19 @@
  "version": "1907ffc9",
  "update_available": false,
  "update_error": "",
- "update_checked_at": 1793874116.6784153,
+ "update_checked_at": 1793874245.5752993,
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
  "disk_free_gb": 240.9,
- "doing": [
-  "20261105-智能客服-3条-1817.json（脚本1 生成中 0分钟[灵启已提交]，脚本2 待开始，脚本3 待开始）"
- ],
+ "doing": [],
  "recent": [
   {
    "batch": "20261105-智能客服-3条-1817.json",
-   "status": "运行中",
-   "start": "11-05 18:22:08"
+   "status": "出错",
+   "start": "11-05 18:22:08",
+   "end": "18:24:38",
+   "error": "已手动终止：想继续时点「重试这批」"
   },
   {
    "batch": "20261105-智能客服-6条-1152.json",
@@ -64,6 +64,14 @@
  ],
  "problems": [
   {
+   "file": "20261105-智能客服-3条-1817.json.问题.txt",
+   "at": "11-05 18:24",
+   "first": "已手动终止。想继续时点「重试这批」，已完成的步骤不会重做。",
+   "last": "已手动终止。想继续时点「重试这批」，已完成的步骤不会重做。",
+   "where": [],
+   "detail": "已手动终止。想继续时点「重试这批」，已完成的步骤不会重做。"
+  },
+  {
    "file": "20261102-智能营销-6条-1335.json.问题-已重试.txt",
    "at": "11-02 14:28",
    "first": "等待超时：等一会儿自动重试",
@@ -84,18 +92,7 @@
     "File \"/data/app-repo/rbflow/lingqi_service.py\", line 53, in _call_once"
    ],
    "detail": "等待超时：等一会儿自动重试\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 193, in run\nself.lq.check_login()\nFile \"/data/app-repo/rbflow/lingqi.py\", line 248, in check_login\nreturn self._raw_check()  # 云端没有 Safari，登录过期由管理员在 /lingqi-login 处理\n^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi.py\", line 178, in _raw_check\nresp = self._svc.call(\"/check_login\", {}, timeout=30)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 32, in call\nreturn self._call_once(path, data, timeout, binary)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 53, in _call_once\nraise RuntimeError(message) from None\nRuntimeError: 灵启服务连接失败：TimeoutError"
-  },
-  {
-   "file": "20261027-智能营销-3条-0907.json.问题.txt",
-   "at": "10-27 09:08",
-   "first": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因",
-   "last": "RuntimeError: 配音模型初始化失败：KeyError：b'XS'",
-   "where": [
-    "File \"/data/app-repo/rbflow/voice_worker.py\", line 31, in <module>",
-    "File \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded"
-   ],
-   "detail": "配音模型没有加载完成：先更新工作台后重试；仍报错请查看问题文件中的模型加载原因\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 207, in run\nself.voice(pending_voice, after_voice)\nFile \"/data/app-repo/rbflow/pipeline.py\", line 282, in voice\nraise RuntimeError(\"配音失败：\\n\" + \"\\n\".join(tail[-12:]))\nRuntimeError: 配音失败：\n~~~~~~~~~~~~^^^^^^^^^\nKeyError: b'XS'\nThe above exception was the direct cause of the following exception:\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/voice_worker.py\", line 31, in <module>\nif ensure_sovits_loaded(engine, cfg, ns.get(\"CHINESE\", \"中文\")):\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/voice_server.py\", line 106, in ensure_sovits_loaded\nraise RuntimeError(\"配音模型初始化失败：\" + type(exc).__name__ + \"：\" + redact(exc)) from exc\nRuntimeError: 配音模型初始化失败：KeyError：b'XS'"
   }
  ],
- "reported_at": "2026-11-05 18:24:03"
+ "reported_at": "2026-11-05 18:25:08"
 }
