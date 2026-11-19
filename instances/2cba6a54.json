@@ -4,8 +4,8 @@
  "enabled": true,
  "version": "1907ffc9",
  "update_available": false,
- "update_error": "",
- "update_checked_at": 1795082272.1111102,
+ "update_error": "连不上 GitHub（网络问题），稍后会自动再试",
+ "update_checked_at": 1795082402.5350003,
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
@@ -93,5 +93,5 @@
    "detail": "已手动终止。想继续时点「重试这批」，已完成的步骤不会重做。"
   }
  ],
- "reported_at": "2026-11-19 17:58:47"
+ "reported_at": "2026-11-19 18:00:55"
 }
