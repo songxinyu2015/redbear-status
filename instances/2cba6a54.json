@@ -7,7 +7,7 @@
  "update_error": "",
  "update_checked_at": 1795082947.2697167,
  "web_ok": true,
- "lingqi_logged_in": false,
+ "lingqi_logged_in": true,
  "selftest_ok": true,
  "disk_free_gb": 228.7,
  "doing": [],
@@ -93,5 +93,5 @@
    "detail": "已手动终止。想继续时点「重试这批」，已完成的步骤不会重做。"
   }
  ],
- "reported_at": "2026-11-19 18:09:31"
+ "reported_at": "2026-11-19 18:10:35"
 }
