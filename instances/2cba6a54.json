@@ -15,8 +15,8 @@
   {
    "batch": "20261119-智能营销-4条-1631.json",
    "status": "出错",
-   "start": "11-19 16:34:18",
-   "error": "未知错误：点顶部「一键修复」；还不行把这一批的 问题.txt 发给 Claude"
+   "start": "11-19 17:24:53",
+   "error": "灵启页面没加载好：自动刷新灵启页面后再试"
   },
   {
    "batch": "20261118-智能客服-5条-1741.json",
@@ -64,6 +64,17 @@
  "problems": [
   {
    "file": "20261119-智能营销-4条-1631.json.问题.txt",
+   "at": "11-19 17:24",
+   "first": "灵启页面没加载好：自动刷新灵启页面后再试",
+   "last": "at UtilityScript.<anonymous> (<anonymous>:1:44)",
+   "where": [
+    "File \"/data/app-repo/rbflow/lingqi_service.py\", line 27, in call",
+    "File \"/data/app-repo/rbflow/lingqi_service.py\", line 48, in _call_once"
+   ],
+   "detail": "灵启页面没加载好：自动刷新灵启页面后再试\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 193, in run\nself.lq.check_login()\nFile \"/data/app-repo/rbflow/lingqi.py\", line 249, in check_login\nreturn self._raw_check()  # 云端没有 Safari，登录过期由管理员在 /lingqi-login 处理\n^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi.py\", line 179, in _raw_check\nresp = self._svc.call(\"/check_login\", {}, timeout=30)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 27, in call\nreturn self._call_once(path, data, timeout, binary)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 48, in _call_once\nraise RuntimeError(\"灵启服务：\" + redact(reason)) from None\nRuntimeError: 灵启服务：Page.evaluate: Error: NOT_LOADED\nat __api (eval at evaluate (:370:30), <anonymous>:5:19)\nat eval (eval at evaluate (:370:30), <anonymous>:12:21)\nat UtilityScript.evaluate (<anonymous>:377:18)\nat UtilityScript.<anonymous> (<anonymous>:1:44)"
+  },
+  {
+   "file": "20261119-智能营销-4条-1631.json.问题-已重试.txt",
    "at": "11-19 16:34",
    "first": "未知错误：点顶部「一键修复」；还不行把这一批的 问题.txt 发给 Claude",
    "last": "at https://lingqi.redbearai.com/static/index-k7dilzF0.js:98:42330",
@@ -80,18 +91,7 @@
    "last": "已手动终止。想继续时点「重试这批」，已完成的步骤不会重做。",
    "where": [],
    "detail": "已手动终止。想继续时点「重试这批」，已完成的步骤不会重做。"
-  },
-  {
-   "file": "20261102-智能营销-6条-1335.json.问题-已重试.txt",
-   "at": "11-02 14:28",
-   "first": "等待超时：等一会儿自动重试",
-   "last": "RuntimeError: 灵启服务连接失败：TimeoutError",
-   "where": [
-    "File \"/data/app-repo/rbflow/lingqi_service.py\", line 32, in call",
-    "File \"/data/app-repo/rbflow/lingqi_service.py\", line 53, in _call_once"
-   ],
-   "detail": "等待超时：等一会儿自动重试\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 193, in run\nself.lq.check_login()\nFile \"/data/app-repo/rbflow/lingqi.py\", line 249, in check_login\nreturn self._raw_check()  # 云端没有 Safari，登录过期由管理员在 /lingqi-login 处理\n^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi.py\", line 179, in _raw_check\nresp = self._svc.call(\"/check_login\", {}, timeout=30)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 32, in call\nreturn self._call_once(path, data, timeout, binary)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 53, in _call_once\nraise RuntimeError(message) from None\nRuntimeError: 灵启服务连接失败：TimeoutError"
   }
  ],
- "reported_at": "2026-11-19 17:23:52"
+ "reported_at": "2026-11-19 17:25:02"
 }
