@@ -9,7 +9,7 @@
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
- "disk_free_gb": 228.9,
+ "disk_free_gb": 227.3,
  "doing": [],
  "recent": [
   {
@@ -93,5 +93,5 @@
    "detail": "已手动终止。想继续时点「重试这批」，已完成的步骤不会重做。"
   }
  ],
- "reported_at": "2026-11-19 19:10:03"
+ "reported_at": "2026-11-19 19:11:02"
 }
