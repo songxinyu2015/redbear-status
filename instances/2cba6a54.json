@@ -5,7 +5,7 @@
  "version": "1907ffc9",
  "update_available": false,
  "update_error": "",
- "update_checked_at": 1795166666.453486,
+ "update_checked_at": 1795166796.6998482,
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
@@ -93,5 +93,5 @@
    "detail": "已手动终止。想继续时点「重试这批」，已完成的步骤不会重做。"
   }
  ],
- "reported_at": "2026-11-20 17:25:30"
+ "reported_at": "2026-11-20 17:27:40"
 }
