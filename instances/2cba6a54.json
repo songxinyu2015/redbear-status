@@ -5,11 +5,11 @@
  "version": "1907ffc9",
  "update_available": false,
  "update_error": "",
- "update_checked_at": 1795161645.9122136,
+ "update_checked_at": 1795161775.5025406,
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
- "disk_free_gb": 226.8,
+ "disk_free_gb": 227.1,
  "doing": [],
  "recent": [
   {
@@ -93,5 +93,5 @@
    "detail": "已手动终止。想继续时点「重试这批」，已完成的步骤不会重做。"
   }
  ],
- "reported_at": "2026-11-20 16:02:33"
+ "reported_at": "2026-11-20 16:03:40"
 }
