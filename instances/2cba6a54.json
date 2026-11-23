@@ -5,19 +5,18 @@
  "version": "1907ffc9",
  "update_available": false,
  "update_error": "",
- "update_checked_at": 1795426307.7936006,
+ "update_checked_at": 1795426436.7073786,
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
  "disk_free_gb": 227.0,
- "doing": [
-  "20261123-智能客服-4条-1730.json（脚本1 失败，脚本2 失败，脚本3 失败，脚本4 提交中 0分钟）"
- ],
+ "doing": [],
  "recent": [
   {
    "batch": "20261123-智能客服-4条-1730.json",
-   "status": "运行中",
-   "start": "11-23 17:31:11"
+   "status": "完成",
+   "start": "11-23 17:31:11",
+   "end": "17:33:58"
   },
   {
    "batch": "20261123-智能营销-4条-1616.json",
@@ -94,5 +93,5 @@
    "detail": "已手动终止。想继续时点「重试这批」，已完成的步骤不会重做。"
   }
  ],
- "reported_at": "2026-11-23 17:33:54"
+ "reported_at": "2026-11-23 17:35:00"
 }
