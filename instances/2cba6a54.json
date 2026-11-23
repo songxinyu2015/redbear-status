@@ -5,13 +5,13 @@
  "version": "1907ffc9",
  "update_available": false,
  "update_error": "",
- "update_checked_at": 1795422086.3327112,
+ "update_checked_at": 1795422208.1818604,
  "web_ok": true,
  "lingqi_logged_in": true,
  "selftest_ok": true,
  "disk_free_gb": 227.0,
  "doing": [
-  "20261123-智能营销-4条-1616.json（脚本1 失败，脚本2 待开始，脚本3 待开始，脚本4 待开始）"
+  "20261123-智能营销-4条-1616.json（脚本1 失败，脚本2 失败，脚本3 失败，脚本4 待开始）"
  ],
  "recent": [
   {
@@ -94,5 +94,5 @@
    "detail": "已手动终止。想继续时点「重试这批」，已完成的步骤不会重做。"
   }
  ],
- "reported_at": "2026-11-23 16:23:24"
+ "reported_at": "2026-11-23 16:24:31"
 }
