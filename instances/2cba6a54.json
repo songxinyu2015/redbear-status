@@ -5,7 +5,7 @@
  "version": "1907ffc9",
  "update_available": false,
  "update_error": "",
- "update_checked_at": 1795486932.9182355,
+ "update_checked_at": 1795487059.7307322,
  "web_ok": true,
  "lingqi_logged_in": false,
  "selftest_ok": true,
@@ -15,8 +15,8 @@
   {
    "batch": "20261123-智能营销-4条-1808.json",
    "status": "出错",
-   "start": "11-23 18:25:44",
-   "error": "灵启登录/权限需要人工：请打开灵启登录页扫码"
+   "start": "11-24 10:24:03",
+   "error": "灵启页面没加载好：自动刷新灵启页面后再试"
   },
   {
    "batch": "20261123-智能营销-4条-1747.json",
@@ -64,6 +64,17 @@
  "problems": [
   {
    "file": "20261123-智能营销-4条-1808.json.问题.txt",
+   "at": "11-24 10:24",
+   "first": "灵启页面没加载好：自动刷新灵启页面后再试",
+   "last": "at UtilityScript.<anonymous> (<anonymous>:1:44)",
+   "where": [
+    "File \"/data/app-repo/rbflow/lingqi_service.py\", line 27, in call",
+    "File \"/data/app-repo/rbflow/lingqi_service.py\", line 48, in _call_once"
+   ],
+   "detail": "灵启页面没加载好：自动刷新灵启页面后再试\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 193, in run\nself.lq.check_login()\nFile \"/data/app-repo/rbflow/lingqi.py\", line 249, in check_login\nreturn self._raw_check()  # 云端没有 Safari，登录过期由管理员在 /lingqi-login 处理\n^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi.py\", line 179, in _raw_check\nresp = self._svc.call(\"/check_login\", {}, timeout=30)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 27, in call\nreturn self._call_once(path, data, timeout, binary)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 48, in _call_once\nraise RuntimeError(\"灵启服务：\" + redact(reason)) from None\nRuntimeError: 灵启服务：Page.evaluate: Error: NOT_LOADED\nat __api (eval at evaluate (:370:30), <anonymous>:5:19)\nat eval (eval at evaluate (:370:30), <anonymous>:12:21)\nat UtilityScript.evaluate (<anonymous>:377:18)\nat UtilityScript.<anonymous> (<anonymous>:1:44)"
+  },
+  {
+   "file": "20261123-智能营销-4条-1808.json.问题-已重试.txt",
    "at": "11-23 18:25",
    "first": "灵启登录/权限需要人工：请打开灵启登录页扫码",
    "last": "rbflow.lingqi.LingqiError: 灵启未登录或无权限：{\"error\": null, \"errorCode\": \"38dde156e64140809a60c80b0af52e82\", \"httpStatus\": 401, \"data\": null, \"exData\": null, \"message\": \"未登录,请登录后操作\", \"code\": 401, \"success\": false, \"serviceTime\": 1795429546179}",
@@ -74,7 +85,7 @@
    "detail": "灵启登录/权限需要人工：请打开灵启登录页扫码\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 193, in run\nself.lq.check_login()\nFile \"/data/app-repo/rbflow/lingqi.py\", line 249, in check_login\nreturn self._raw_check()  # 云端没有 Safari，登录过期由管理员在 /lingqi-login 处理\n^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi.py\", line 181, in _raw_check\nraise LingqiError(\"灵启未登录或无权限：\" + json.dumps(resp, ensure_ascii=False)[:300])\nrbflow.lingqi.LingqiError: 灵启未登录或无权限：{\"error\": null, \"errorCode\": \"38dde156e64140809a60c80b0af52e82\", \"httpStatus\": 401, \"data\": null, \"exData\": null, \"message\": \"未登录,请登录后操作\", \"code\": 401, \"success\": false, \"serviceTime\": 1795429546179}"
   },
   {
-   "file": "20261123-智能营销-4条-1808.json.问题-已重试.txt",
+   "file": "20261123-智能营销-4条-1808.json.问题-已重试-已重试.txt",
    "at": "11-23 18:21",
    "first": "灵启登录/权限需要人工：请打开灵启登录页扫码",
    "last": "rbflow.lingqi.LingqiError: 灵启未登录或无权限：{\"error\": null, \"errorCode\": \"75f0694844414fab877e6c3856698f97\", \"httpStatus\": 401, \"data\": null, \"exData\": null, \"message\": \"未登录,请登录后操作\", \"code\": 401, \"success\": false, \"serviceTime\": 1795429282556}",
@@ -83,18 +94,7 @@
     "File \"/data/app-repo/rbflow/lingqi.py\", line 181, in _raw_check"
    ],
    "detail": "灵启登录/权限需要人工：请打开灵启登录页扫码\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 193, in run\nself.lq.check_login()\nFile \"/data/app-repo/rbflow/lingqi.py\", line 249, in check_login\nreturn self._raw_check()  # 云端没有 Safari，登录过期由管理员在 /lingqi-login 处理\n^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi.py\", line 181, in _raw_check\nraise LingqiError(\"灵启未登录或无权限：\" + json.dumps(resp, ensure_ascii=False)[:300])\nrbflow.lingqi.LingqiError: 灵启未登录或无权限：{\"error\": null, \"errorCode\": \"75f0694844414fab877e6c3856698f97\", \"httpStatus\": 401, \"data\": null, \"exData\": null, \"message\": \"未登录,请登录后操作\", \"code\": 401, \"success\": false, \"serviceTime\": 1795429282556}"
-  },
-  {
-   "file": "20261119-智能营销-4条-1631.json.问题-已重试.txt",
-   "at": "11-19 17:24",
-   "first": "灵启页面没加载好：自动刷新灵启页面后再试",
-   "last": "at UtilityScript.<anonymous> (<anonymous>:1:44)",
-   "where": [
-    "File \"/data/app-repo/rbflow/lingqi_service.py\", line 27, in call",
-    "File \"/data/app-repo/rbflow/lingqi_service.py\", line 48, in _call_once"
-   ],
-   "detail": "灵启页面没加载好：自动刷新灵启页面后再试\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 193, in run\nself.lq.check_login()\nFile \"/data/app-repo/rbflow/lingqi.py\", line 249, in check_login\nreturn self._raw_check()  # 云端没有 Safari，登录过期由管理员在 /lingqi-login 处理\n^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi.py\", line 179, in _raw_check\nresp = self._svc.call(\"/check_login\", {}, timeout=30)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 27, in call\nreturn self._call_once(path, data, timeout, binary)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi_service.py\", line 48, in _call_once\nraise RuntimeError(\"灵启服务：\" + redact(reason)) from None\nRuntimeError: 灵启服务：Page.evaluate: Error: NOT_LOADED\nat __api (eval at evaluate (:370:30), <anonymous>:5:19)\nat eval (eval at evaluate (:370:30), <anonymous>:12:21)\nat UtilityScript.evaluate (<anonymous>:377:18)\nat UtilityScript.<anonymous> (<anonymous>:1:44)"
   }
  ],
- "reported_at": "2026-11-24 10:22:46"
+ "reported_at": "2026-11-24 10:24:53"
 }
