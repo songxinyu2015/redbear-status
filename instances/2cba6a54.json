@@ -10,8 +10,15 @@
  "lingqi_logged_in": true,
  "selftest_ok": true,
  "disk_free_gb": 222.7,
- "doing": [],
+ "doing": [
+  "20261127-非标-6条-1044.json（脚本1 待开始，脚本2 待开始，脚本3 待开始，脚本4 待开始，脚本5 待开始，脚本6 待开始）"
+ ],
  "recent": [
+  {
+   "batch": "20261127-非标-6条-1044.json",
+   "status": "运行中",
+   "start": "11-27 10:51:24"
+  },
   {
    "batch": "20261127-非标-6条-1005.json",
    "status": "完成",
@@ -53,12 +60,6 @@
    "status": "完成",
    "start": "11-24 11:37:55",
    "end": "11:48:07"
-  },
-  {
-   "batch": "20261123-智能营销-4条-1808.json",
-   "status": "完成",
-   "start": "11-24 11:25:52",
-   "end": "11:37:53"
   }
  ],
  "problems": [
@@ -96,5 +97,5 @@
    "detail": "灵启登录/权限需要人工：请打开灵启登录页扫码\nTraceback (most recent call last):\nFile \"/data/app-repo/rbflow/__main__.py\", line 96, in process\nrun.run()\nFile \"/data/app-repo/rbflow/pipeline.py\", line 193, in run\nself.lq.check_login()\nFile \"/data/app-repo/rbflow/lingqi.py\", line 249, in check_login\nreturn self._raw_check()  # 云端没有 Safari，登录过期由管理员在 /lingqi-login 处理\n^^^^^^^^^^^^^^^^^\nFile \"/data/app-repo/rbflow/lingqi.py\", line 181, in _raw_check\nraise LingqiError(\"灵启未登录或无权限：\" + json.dumps(resp, ensure_ascii=False)[:300])\nrbflow.lingqi.LingqiError: 灵启未登录或无权限：{\"error\": null, \"errorCode\": \"75f0694844414fab877e6c3856698f97\", \"httpStatus\": 401, \"data\": null, \"exData\": null, \"message\": \"未登录,请登录后操作\", \"code\": 401, \"success\": false, \"serviceTime\": 1795429282556}"
   }
  ],
- "reported_at": "2026-11-27 10:50:40"
+ "reported_at": "2026-11-27 10:51:44"
 }
